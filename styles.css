@@ -62,7 +62,7 @@ button {
     width: 100%;
     height: 44px;
     background-color: #ca3884;
-    color: white;
+    color: rgb(32, 31, 31);
     border: none;
     border-radius: 12px;
     cursor: pointer;
@@ -71,7 +71,7 @@ button {
 }
 
 button:hover {
-    background-color: #9b2c6c;
+    background-color: #9e7928;
 
 }
 ul {
@@ -83,6 +83,45 @@ ul {
     height: 24px;
     margin-right: 10px;
     cursor: pointer;
-    background-color: tomato;
+    background-color: rgb(24, 23, 23);
 
+}
+ul {
+  list-style: none;          /* Remove os marcadores */
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  margin-bottom: 10px;       /* Espaçamento entre itens */
+}
+
+.item {
+  display: flex;             /* Alinha os elementos na horizontal */
+  justify-content: space-between; /* Distribui os elementos ocupando toda a linha */
+  align-items: center;       /* Centraliza verticalmente */
+  background-color: #c7c4c4; /* (Opcional) Fundo para destacar o item */
+  padding: 10px;
+  border-radius: 8px;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;    /* Inclui padding na largura total */
+}
+
+.item button {
+  background-color: #ca3884;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.item button:hover {
+  background-color: #9e7928;
+}
+
+.item span {
+  flex-grow: 1;              /* Faz o texto ocupar o espaço central */
+  text-align: center;        /* Centraliza o nome do item */
+  font-weight: 500;
 }
