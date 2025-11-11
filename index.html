@@ -1,25 +1,57 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>  
-    <img src="Lista de compras/Vector.png"> <span>Quicklist</span>
-    <link rel="stylesheet" href="styles.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Compras da semana</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div>Voltar</div>
-<span>Compras da semana</span>
-  <input type="text" name="amount" id="amount" placeholder="0" required />
-    <button type="submit">adicionar item </button>
+    <img src="Lista de compras/Vector.png" alt="logo"> 
+    <span>Quicklist</span>
+    <br><br>
 
+    <div><img src="Lista de compras/link button.png" alt="botão"></div>
+    <br>
+    <span>Compras da semana</span>
+    <br><br><br>
 
+    <input type="text" id="adicionarItem" placeholder="Adicione um novo item" required />
+    <button id="btnAdicionar">Adicionar item</button>
 
+    <ul id="listaCompras">
+        <li>
+            <div class="item"> 
+                <button class="check-button">Selecione</button>
+                <span>Leite</span>
+                <button class="delete-button">Excluir</button>
+            </div>
+        </li>
+        <li>
+            <div class="item"> 
+                <button class="check-button">Selecione</button>
+                <span>Café</span>
+                <button class="delete-button">Excluir</button>
+            </div>
+        </li>
+        <li>
+            <div class="item"> 
+                <button class="check-button">Selecione</button>
+                <span>Açúcar</span>
+                <button class="delete-button">Excluir</button>
+            </div>
+        </li>
+        <li>
+            <div class="item"> 
+                <button class="check-button">Selecione</button>
+                <span>Arroz</span>
+                <button class="delete-button">Excluir</button>
+            </div>
+        </li>
+    </ul>
 
-
-
-
-
-    <script src="scripts.js"></script>
+    <script src="scripts.js">
+     
+    </script>
 </body>
 </html>

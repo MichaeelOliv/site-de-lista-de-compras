@@ -1,0 +1,88 @@
+:root {
+background-color: #f4f5fb;
+color: hsl(0, 0%, 6%);
+flex: 1;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+padding: 30;
+padding-top: 30;
+padding-top: 60;
+
+}
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 colunas iguais */
+  gap: 20px; /* Espaçamento entre os itens */
+    width: 100%;
+}
+body {
+
+  margin: 6px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+title {
+
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #111827;
+    margin-bottom: 60px;
+   
+  
+}
+span {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #111827;
+    margin-bottom: 60px;
+  
+  
+}
+input {
+  
+    border-width: 1;
+    border-color: #d1d5db;
+    border-radius: 12px;
+    padding: 10px;
+    margin-bottom: 20px;
+    font-size: 16px;
+   padding-bottom: 10px;
+   width: 100%;
+   
+
+}
+input:hover {
+    border-color: #ca3884;
+
+}
+button {
+    width: 100%;
+    height: 44px;
+    background-color: #ca3884;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 16px;
+   
+}
+
+button:hover {
+    background-color: #9b2c6c;
+
+}
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+ .check-button, .delete-button {
+    width: 84px;
+    height: 24px;
+    margin-right: 10px;
+    cursor: pointer;
+    background-color: tomato;
+
+}
