@@ -3,6 +3,15 @@
         const btnAdicionar = document.getElementById('btnAdicionar');
         const lista = document.getElementById('listaCompras');
 
+        // Atualiza o contador visível de itens
+        function atualizarContador() {
+            const total = lista.querySelectorAll('li').length;
+            const comprados = lista.querySelectorAll('.item.selecionado').length;
+            const cont = document.getElementById('contadorItens');
+            cont.textContent = `Total: ${total} item${total !== 1 ? 's' : ''}` +
+                              (total ? ` (${comprados} comprado${comprados !== 1 ? 's' : ''})` : '');
+        }
+
         // Função para adicionar item
         function adicionarItem() {
             const texto = input.value.trim();
@@ -14,27 +23,46 @@
             const li = document.createElement('li');
             li.innerHTML = `
                 <div class="item">
-                    <button class="check-button">Selecione</button>
+                    <button class="check-button" aria-label="Marcar como comprado">☐</button>
                     <span>${texto}</span>
-                    <button class="delete-button">Excluir</button>
+                    <button class="delete-button" aria-label="Remover item">🗑️</button>
                 </div>
             `;
 
+            // efeito de surgimento
+            li.style.opacity = '0';
             lista.appendChild(li);
+            setTimeout(() => {
+                li.style.transition = 'opacity 0.4s';
+                li.style.opacity = '1';
+            }, 10);
+
             input.value = '';
             input.focus();
+            atualizarContador();
         }
 
         // Função para remover ou marcar item
         function manipularLista(e) {
+            // exclusão com pequeno efeito
             if (e.target.classList.contains('delete-button')) {
-                e.target.closest('li').remove();
+                const li = e.target.closest('li');
+                li.style.transition = 'opacity 0.3s';
+                li.style.opacity = '0';
+                setTimeout(() => {
+                    li.remove();
+                    atualizarContador();
+                }, 300);
+                return;
             }
 
             if (e.target.classList.contains('check-button')) {
                 const item = e.target.closest('div.item');
                 item.classList.toggle('selecionado');
-                e.target.textContent = item.classList.contains('selecionado') ? 'Selecionado' : 'Selecione';
+                const marcado = item.classList.contains('selecionado');
+                e.target.textContent = marcado ? '✅' : '☐';
+                e.target.classList.toggle('selected', marcado);
+                atualizarContador();
             }
         }
 
@@ -44,3 +72,6 @@
             if (e.key === 'Enter') adicionarItem();
         });
         lista.addEventListener('click', manipularLista);
+
+        // inicializar contador
+        atualizarContador();

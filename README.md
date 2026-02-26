@@ -7,8 +7,8 @@ Este é um site simples e intuitivo para criar e gerenciar listas de compras. De
 ## Funcionalidades
 
 - **Adicionar itens**: Digite o nome do item no campo de entrada e clique em "Adicionar item" ou pressione Enter.
-- **Marcar itens**: Clique no botão "Selecione" para marcar um item como selecionado (útil para itens já comprados).
-- **Remover itens**: Clique no botão "Excluir" para remover um item da lista.
+- **Marcar itens**: Clique no botão com o ícone ☐/✅ para alternar o estado de comprado; o texto do item ficará riscado quando selecionado.
+- **Remover itens**: Clique no botão com o ícone 🗑️ para excluir um item da lista.
 - **Interface responsiva**: Design simples e limpo, otimizado para dispositivos móveis e desktop.
 
 ## Tecnologias Utilizadas
